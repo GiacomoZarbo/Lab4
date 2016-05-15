@@ -1,6 +1,5 @@
 package it.polito.tdp.anagrammi.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import it.polito.tdp.anagrammi.DAO.DAO;
 
@@ -14,11 +13,7 @@ public class Model {
 
 	public List<String> anagrammaParola(String parola) {
 		Anagramma anagramma = new Anagramma();
-		List<Character> caratteri = new ArrayList<Character>();
-		for (int i = 0; i < parola.length(); i++)
-			caratteri.add(i, parola.charAt(i));
-		List<String> parole = anagramma.anagrammaParola(caratteri);
-		System.out.println(caratteri);
+		List<String> parole = anagramma.anagrammaParola(parola);
 		return parole;
 		
 	}
